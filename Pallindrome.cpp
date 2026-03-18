@@ -22,7 +22,7 @@ using namespace std;
 
 // Optimal approach 0(1)
 void Optimal(){
-string str="madam";
+string str="hello";
 
 int l=0,r=str.length()-1;
 bool ispallindrome=true;
