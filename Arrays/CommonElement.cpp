@@ -8,7 +8,8 @@ int main(){
     int arr1[]={2,3,4,8};
     int arr2[]={4,3,5,67,8};
 
-    int n1=5,n2=6;
+    int n1= sizeof(arr1)/sizeof(arr1[0]);
+    int n2= sizeof(arr2)/sizeof(arr2[0]);
 
     for(int i=0;i<n1;i++){
         for(int j=0;j<n2;j++){
@@ -20,5 +21,6 @@ int main(){
     }
     return 0;
 }
+
 
 // 
