@@ -1,4 +1,5 @@
 #include<iostream>
+#include<map>
 #include<unordered_map>
 using namespace std;
 
@@ -54,7 +55,8 @@ int main(){
     int arr[]={1,2,2,2,3,1,4,2};
     int n=7;
 
-    unordered_map<int,int>freq;
+    // unordered_map<int,int>freq;
+    map<int,int> freq;
 
     // count frequency
 
