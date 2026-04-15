@@ -26,24 +26,34 @@ void merge(int arr[], int l, int mid, int r){
     }
 }
 
+void PrintArray(int arr[], int n){
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+    }
+}
+
 void mergeSort(int arr[], int l, int r){
     if(l < r){
         int mid = (l + r) / 2;
 
-        mergeSort(arr, l, mid);     // left
-        mergeSort(arr, mid+1, r);   // right
+        mergeSort(arr, l, mid);
+        mergeSort(arr, mid+1, r);
 
-        merge(arr, l, mid, r);      // merge
+        merge(arr, l, mid, r);
     }
 }
 
 int main(){
-    int arr[] = {38,27,43,3,9,82,10};
-    int n = 7;
+    int n = 5;
+    int arr[] = {2,3,5,1,9};
+
+    cout << "Before sorting: ";
+    PrintArray(arr, n);
 
     mergeSort(arr, 0, n-1);
 
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }
+    cout << "\nAfter sorting: ";
+    PrintArray(arr, n);
+
+    return 0;
 }
