@@ -88,6 +88,23 @@ class List{
 
         }
     }
+    void insert (int val,int pos){
+        if(pos <0){
+            cout<<"Invalid pos\n";
+            return ;
+        }
+        if(pos == 0){
+            push_front(val);
+            return ;
+        }
+        Node* temp = head;
+        for(int i=0;i<pos-1;i++){
+            temp=temp->next;
+        }
+         Node* newNode = new Node(val);
+        newNode->next = temp->next;
+        temp->next = newNode;
+    }
       
 
 
@@ -95,13 +112,14 @@ class List{
 int main(){
     List ll;
 
-    ll.push_front(1);
-    ll.push_front(2);
     ll.push_front(3);
+    ll.push_front(2);
+    ll.push_front(1);
 
-    ll.push_back(4);//pushing at the end of the linked list
-    ll.pop_front();
-    ll.pop_back();
+    // ll.push_back(4);//pushing at the end of the linked list
+    // ll.pop_front();
+    // ll.pop_back();
+    ll.insert(2,3);
     ll.PrintLL();
     return 0;
 
