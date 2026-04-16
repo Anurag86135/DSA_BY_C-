@@ -99,6 +99,10 @@ class List{
         }
         Node* temp = head;
         for(int i=0;i<pos-1;i++){
+            if(temp ==NULL){
+                cout<<"Invalid pos\n";
+                return;
+            }
             temp=temp->next;
         }
          Node* newNode = new Node(val);
@@ -106,6 +110,19 @@ class List{
         temp->next = newNode;
     }
       
+    int search(int key){
+        Node* temp =head;
+        int pos = 0;
+
+        while(temp !=NULL){
+            if(temp->data == key){
+                return pos;
+            }
+            temp = temp->next;
+            pos++;
+        }
+        return -1; // not found
+    }
 
 
 };
@@ -119,8 +136,10 @@ int main(){
     // ll.push_back(4);//pushing at the end of the linked list
     // ll.pop_front();
     // ll.pop_back();
-    ll.insert(2,3);
+    // ll.insert(2,3);
     ll.PrintLL();
+    cout<<ll.search(2)<<endl;//Searching for the element in the linked list and returning its position if found, otherwise returning -1.
+
     return 0;
 
 }
