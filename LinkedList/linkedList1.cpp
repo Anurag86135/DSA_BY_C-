@@ -22,7 +22,7 @@ class List{
     }
 
 
-    void push_front(int val){
+    void push_front(int val){//O(1)
         Node* newNode = new Node(val);
         if(head == NULL){
             head=tail=newNode;
@@ -35,7 +35,7 @@ class List{
     }
 
 
-    void push_back(int val){
+    void push_back(int val){//O(1)
         Node* newNode = new Node(val);
 
         if(head ==NULL){
@@ -45,7 +45,7 @@ class List{
             tail = newNode;
         }
     }
-    void PrintLL(){
+    void PrintLL(){//O(n)
         Node* temp =head;
 
         while(temp!=NULL){
@@ -58,7 +58,7 @@ class List{
 
     // other functions like pop_front, pop_back, insertAtPosition, deleteAtPosition, etc. can be implemented similarly.
 
-    void pop_front(){
+    void pop_front(){//O(1)
         if(head==NULL){
             cout<<"LL is empty\n";
             return ;
@@ -69,7 +69,7 @@ class List{
 
     }
 
-    void pop_back(){
+    void pop_back(){//O(n)
         if(head==NULL){
             cout<<"LL is empty\n";
             return;
@@ -88,7 +88,7 @@ class List{
 
         }
     }
-    void insert (int val,int pos){
+    void insert (int val,int pos){//O(n)
         if(pos <0){
             cout<<"Invalid pos\n";
             return ;
@@ -110,7 +110,7 @@ class List{
         temp->next = newNode;
     }
       
-    int search(int key){
+    int search(int key){//O(n)
         Node* temp =head;
         int pos = 0;
 
