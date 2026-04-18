@@ -55,7 +55,7 @@ int main(){
     cout<<"Rversed List: ";
     printList(head);
 
-    return 0;
+    return 0
 
 
 }
