@@ -58,5 +58,5 @@ int main(){
     cout<<"Merged Linked List: ";
     printList(mergedHead);
 
-    return 0
+    return 0;
 }
